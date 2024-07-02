@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-login</title>
+    <link rel="stylesheet" href="/admin login/admin.css">
+    <link rel="shortcut icon " type="x-icon" href="/image/digital agency logo.png">
+</head>
+<body>
+              <!-- Login Section -->
+      <div id="loginSection" class="login-container">
+        <h2 class="admin-heading">Admin Login</h2>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <p id="error-msg"></p>
+        </form>
+    </div>
+
+             <!-- Admin Panel Section -->
+     <div id="head" class="heading-con" style="display:none ;"><h2>Admin Panel</h2></div>
+    <div id="adminPanel" class="admin-container" style="display:none;  ">
+          
+        <section id="events" class="admin-section">
+            <h3>Add Event</h3>
+            <form id="eventForm" onsubmit="return submitEvent(event)">
+                <div class="input-group">
+                    <label for="eventTitle">Title</label>
+                    <input type="text" id="eventTitle" name="eventTitle" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventDate">Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventDescription">Description</label>
+                    <textarea id="eventDescription" name="eventDescription" required></textarea>
+                </div>
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+        <section id="news" class="admin-section">
+            <h3>Add News</h3>
+            <form id="newsForm" onsubmit="return submitNews(event)">
+                <div class="input-group">
+                    <label for="newsTitle">Title</label>
+                    <input type="text" id="newsTitle" name="newsTitle" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventDate">Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                <div class="input-group">
+                    <label for="newsContent">Content</label>
+                    <textarea id="newsContent" name="newsContent" required></textarea>
+                </div>
+                <button type="submit">Add News</button>
+            </form>
+        </section>
+        <section id="gallery" class="admin-section">
+            
+            <h3 class="gallery-heading">Add Gallery Item</h3>
+            
+            <form id="galleryForm" onsubmit="return submitGallery(event)" class="gallery-section">
+                <div class="input-group">
+                    <label for="galleryTitle">Title</label>
+                    <input type="text" id="galleryTitle" name="galleryTitle" required>
+                </div>
+                <div class="input-group">
+                    <label for="galleryImage">Image URL</label>
+                    <input type="text" id="galleryImage" name="galleryImage" required>
+                </div>
+                <button type="submit">Add Gallery Item</button>
+            </form>
+        </section>
+        <section id="services" class="admin-section">
+            <h3>Add Service</h3>
+            <form id="serviceForm" onsubmit="return submitService(event)">
+                <div class="input-group">
+                    <label for="serviceName">Service Name</label>
+                    <input type="text" id="serviceName" name="serviceName" required>
+                </div>
+                <div class="input-group">
+                    <label for="serviceDescription">Service Description</label>
+                    <textarea id="serviceDescription" name="serviceDescription" required></textarea>
+                </div>
+                <button type="submit">Add Service</button>
+            </form>
+        </section>
+    </div>
+    <script src="/admin login/admin.js"></script>
+</body>
+</html>
